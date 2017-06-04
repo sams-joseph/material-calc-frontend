@@ -25,7 +25,7 @@ class Login extends Component {
   onSubmit(e) {
     e.preventDefault();
     this.props.login(this.state).then(
-      (res) => this.props.history.push('/'),
+      (res) => this.props.history.push('/admin'),
       (err) => this.setState({ errors: err.response.data.errors, isLoading: false })
     );
   }
