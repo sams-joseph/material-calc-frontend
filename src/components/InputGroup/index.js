@@ -6,7 +6,7 @@ const InputGroup = (props) => {
   const { name, label, onChange, type } = props;
 
   return (
-    <div>
+    <div className='input-group'>
       <label htmlFor={ name }>{ label }</label>
       <input
         type={ type }

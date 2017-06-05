@@ -11,7 +11,7 @@ export default function(ComposedComponent) {
           type: 'error',
           text: 'You need to login to access this page'
         });
-        this.props.history.push('/');
+        this.props.history.push('/login');
       }
     }
 

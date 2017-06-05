@@ -1,0 +1,83 @@
+.site-navigation {
+  background: #2B2938;
+  border-radius: 6px;
+  box-shadow: 0 50px 100px rgba(50,50,93,.1),
+              0 15px 35px rgba(50,50,93,.15),
+              0 5px 15px rgba(50,50,93,.1);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 15px 20px;
+  width: 100%;
+}
+
+.site-navigation a {
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  height: 24px;
+  text-decoration: none;
+}
+
+.global-navigation {
+  flex: 0 0 auto;
+  display: flex;
+  height: 24px;
+}
+
+.global-navigation > a {
+  color: #c6daef;
+  line-height: 26px;
+}
+
+.link-divider {
+  background: #c6daef;
+  display: inline-block;
+  height: 24px;
+  margin: 0 15px;
+  opacity: 0.5;
+  width: 1px;
+}
+
+.auth-navigation {
+  display: flex;
+  flex: 0 0 auto;
+  height: 24px;
+}
+
+.auth-navigation > a {
+  margin-left: 20px;
+  line-height: 26px;
+}
+
+.login-button {
+  background: #88A4FF;
+  border-radius: 3px;
+  display: block;
+  font-size: 12px;
+  padding: 0 10px;
+}
+
+.profile-picture {
+  background: #88A4FF;
+  border-radius: 12px;
+  display: inline-block;
+  height: 24px;
+  overflow: hidden;
+  padding: 3px 0;
+  text-align: center;
+  width: 24px;
+}
+
+.profile-picture > img {
+  height: 18px;
+  width: 18px;
+}
+
+.user-name {
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
+  margin-right: 10px;
+}

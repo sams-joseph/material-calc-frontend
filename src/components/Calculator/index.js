@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import Select from '../Select';
 import InputGroup from '../InputGroup';
 
 import { getCategories } from '../../actions/categories';
 import { setMaterials } from '../../actions/materials';
+
+import chevronRight from './img/chevron-right.svg';
 
 
 class Calculator extends Component {
@@ -56,36 +59,41 @@ class Calculator extends Component {
   }
 
   render() {
-    const { categories, materials, flash } = this.props;
+    const { categories, materials } = this.props;
 
     return (
-      <form>
-        { flash.text }
+      <div className='container'>
+        <ul className='breadcrumbs'>
+          <li><Link to='/'>Home</Link></li>
+          <li><img src={ chevronRight } alt='chevron-right'/></li>
+        </ul>
+        <form>
         <Select
-          name="category"
-          value={ this.state.category }
-          onChange={ this.handleChange }
-          options={ categories.categories }
+        name="category"
+        value={ this.state.category }
+        onChange={ this.handleChange }
+        options={ categories.categories }
         />
         <Select
-          name="material"
-          value={ this.state.material }
-          onChange={ this.handleChange }
-          options={ materials }
+        name="material"
+        value={ this.state.material }
+        onChange={ this.handleChange }
+        options={ materials }
         />
         <InputGroup
-          type="text"
-          name="diameter"
-          label="Core Diameter"
-          onChange={ this.handleChange }
+        type="text"
+        name="diameter"
+        label="Core Diameter"
+        onChange={ this.handleChange }
         />
         <InputGroup
-          type="text"
-          name="circumference"
-          label="Circumference"
-          onChange={ this.handleChange }
+        type="text"
+        name="circumference"
+        label="Circumference"
+        onChange={ this.handleChange }
         />
-      </form>
+        </form>
+      </div>
     )
   }
 }

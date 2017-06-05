@@ -16,6 +16,7 @@ export function logout() {
     localStorage.removeItem('jwtToken');
     setAuthorizationToken(false);
     dispatch(setCurrentUser({}));
+    dispatch(addFlashMessage({ type: 'success', text: 'You have been logged out.'}))
   }
 }
 

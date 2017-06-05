@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import InputGroup from '../InputGroup';
+import { Link } from 'react-router-dom';
 import { login } from '../../actions/authorization';
+
+import './css/style.css';
+import chevronRight from './img/chevron-right.svg';
+import unlock from './img/unlock.svg';
+import atSign from './img/at-sign.svg';
 
 class Login extends Component {
   constructor(props) {
@@ -32,22 +37,35 @@ class Login extends Component {
 
   render() {
     return (
-      <form onSubmit={ this.onSubmit }>
-        <InputGroup
-          type="email"
-          name="email"
-          label="email"
-          onChange={ this.handleChange }
-        />
-        <InputGroup
-          type="password"
-          name="password"
-          label="password"
-          onChange={ this.handleChange }
-        />
+      <div className='container'>
+        <ul className='breadcrumbs'>
+          <li><Link to='/'>Home</Link></li>
+          <li><img src={ chevronRight } alt='chevron-right'/></li>
+          <li>Login</li>
+        </ul>
+        <form className='login-form' onSubmit={ this.onSubmit }>
+          <h1>Welcome Back!</h1>
+          <div className='input-group'>
+            <label htmlFor='email'><img src={ atSign } alt='email' /></label>
+            <input
+              type='email'
+              name='email'
+              onChange={ e => this.handleChange(e.target.value, e.target.name) }
+            />
+          </div>
+          <div className='input-group'>
+            <label htmlFor='password'><img src={ unlock } alt='password' /></label>
+            <input
+              type='password'
+              name='password'
+              onChange={ e => this.handleChange(e.target.value, e.target.name) }
+            />
+          </div>
 
-        <input type="submit" value="login"/>
-      </form>
+          <input type="submit" value="Sign In"/>
+          <Link to=''>Forgot your password?</Link>
+        </form>
+      </div>
     )
   }
 }

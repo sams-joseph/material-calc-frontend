@@ -1,0 +1,88 @@
+.flash-container {
+  border-radius: 3px;
+  display: flex;
+  overflow: hidden;
+  padding: 20px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  transition: all 0.25s;
+  width: 400px;
+}
+
+.flash-icon {
+  background-size: cover;
+  display: block;
+  flex: 0 0 25px;
+  height: 25px;
+  margin-right: 20px;
+  width: 25px;
+}
+
+.flash-message {
+  display: block;
+  flex: 1 1 auto;
+  height: 25px;
+  line-height: 25px;
+}
+
+.flash-button {
+  background-size: cover;
+  cursor: pointer;
+  display: block;
+  flex: 0 0 25px;
+  height: 25px;
+  margin-left: 20px;
+  width: 25px;
+}
+
+.show-message {
+  opacity: 0.95;
+}
+
+.hide-message {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.success {
+  background: #F8FFFF;
+  border: 1px solid #A9D5DE;
+  color: #367385;
+}
+
+.success > .flash-icon {
+  background: url(../img/check-circle.svg) no-repeat;
+}
+
+.success > .flash-button {
+  background: url(../img/success-x.svg) no-repeat;
+}
+
+.warning {
+  background: #FFFAF3;
+  border: 1px solid #C9BA9B;
+  color: #794B02;
+}
+
+.warning > .flash-icon {
+  background: url(../img/alert-triangle.svg) no-repeat;
+}
+
+.warning > .flash-button {
+  background: url(../img/warning-x.svg) no-repeat;
+}
+
+.error {
+  background: #FFF6F6;
+  border: 1px solid #E0B4B4;
+  color: #B36B69;
+}
+
+.error > .flash-icon {
+  background: url(../img/alert-octagon.svg) no-repeat;
+}
+
+.error > .flash-button {
+  background: url(../img/error-x.svg) no-repeat;
+}
