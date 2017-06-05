@@ -159,7 +159,7 @@
 }
 
 .verify-delete-popup {
-  background: white;
+  background: #2B2938;
   border-radius: 6px;
   box-shadow: 0 50px 100px rgba(50,50,93,.1),
               0 15px 35px rgba(50,50,93,.15),
@@ -177,8 +177,8 @@
 
 .popup-message {
   align-items: center;
-  background: #f3f3f3;
-  color: #998EFB;
+  background: #2B2938;
+  color: #84FFCC;
   display: flex;
   flex: 1 1 auto;
   justify-content: center;
@@ -191,7 +191,7 @@
 }
 
 .button-group {
-  background: #9287F6;
+  background: #3F3B5A;
   display: flex;
   flex: 0 0 60px;
   justify-content: space-between;
@@ -199,13 +199,13 @@
 }
 
 .button-group > button {
-  background: white;
+  background: #88A4FF;
   border: none;
   border-radius: 4px;
-  color: #7E74D7;
+  color: white;
   cursor: pointer;
   height: 40px;
-  opacity: 0.8;
+  opacity: 1;
   transition: opacity 0.25s;
   width: 48%;
 }
